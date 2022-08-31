@@ -11,7 +11,11 @@ import { useHotkeys } from '@mantine/hooks';
 import { NotificationsProvider } from '@mantine/notifications';
 import rtlPlugin from 'stylis-plugin-rtl';
 
-export const parameters = { layout: 'fullscreen' };
+export const parameters = {
+  // disables snapshotting on a global level
+  chromatic: { disableSnapshot: false },
+  layout: 'fullscreen'
+};
 
 const rtlCache = createEmotionCache({
   key: 'mantine-rtl',

@@ -8,7 +8,7 @@ export function Usage() {
     <div style={{ padding: 40 }}>
       <Chip type="radio">Single</Chip>
       <Chip disabled mt="xl">
-        Disabled
+        Disabled2
       </Chip>
       <Chip disabled checked mt="xl">
         Disabled checked

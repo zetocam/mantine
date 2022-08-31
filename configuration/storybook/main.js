@@ -14,7 +14,7 @@ const storiesPath = !argv._[0]
 
 module.exports = {
   stories: [storiesPath],
-  addons: ['storybook-addon-turbo-build', 'storybook-dark-mode'],
+  addons: ['storybook-dark-mode'],
   webpackFinal: async (config) => {
     config.resolve = {
       ...config.resolve,
@@ -25,6 +25,13 @@ module.exports = {
           configFile: path.join(__dirname, '../../tsconfig.json'),
         }),
       ],
+    };
+
+    config.devServer = {
+      headers: {
+        'Access-Control-Allow-Origin': 'localhost:6006',
+      },
+      https: true,
     };
 
     // Turn off docgen plugin as it breaks bundle with displayName
