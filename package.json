@@ -32,7 +32,7 @@
     "_exports": "esno scripts/check-exports",
     "_conflicts": "esno scripts/check-conflicts",
     "_clean": "rimraf src/*/{esm,cjs,lib,dist} src/**/*.tsbuildinfo",
-    "storybook": "esno scripts/storybook-start",
+    "_storybook": "esno scripts/storybook-start",
     "storybook:build": "esno scripts/storybook-build",
     "storybook:build2": "build-storybook -c ./configuration/storybook/",
     "storybook:extract": "npx storybook extract",
